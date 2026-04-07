@@ -17,9 +17,11 @@
     "./style.css": "./dist/style.css"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build": "vite build"
+    "storybook:build": "storybook build", 
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
