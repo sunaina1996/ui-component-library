@@ -2,6 +2,9 @@
   "name": "@sunaina/ui-library",
   "version": "1.0.0",
   "private": false,
+  "description": "React component library",
+  "author": "Sunaina",
+  "license": "MIT",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -16,12 +19,17 @@
     },
     "./style.css": "./dist/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunaina1996/ui-component-library.git"
+  },
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "storybook": "storybook dev -p 6006",
-  "storybook:build": "storybook build",
-  "build-storybook": "storybook build"
+    "dev": "vite",
+    "build": "vite build",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^18.2.0",
