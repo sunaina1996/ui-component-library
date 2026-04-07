@@ -1,29 +1,18 @@
-import type { StorybookConfig } from "@storybook/react-vite";
-import tailwindcss from "@tailwindcss/postcss";
+import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  stories: ["../src/components/**/*.stories.@(ts|tsx)"],
-  addons: ["@storybook/addon-essentials"],
-  framework: { name: "@storybook/react-vite", options: {} },
-  docs: { autodocs: "tag" },
-  viteFinal: (config) => {
-    return {
-      ...config,
-      css: {
-        ...config.css,
-        postcss: {
-          plugins: [tailwindcss()],
-        },
-      },
-      optimizeDeps: {
-        ...config.optimizeDeps,
-        exclude: [
-          ...(config.optimizeDeps?.exclude ?? []),
-          "@tailwindcss/postcss",
-        ],
-      },
-    };
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-links',
+    '@storybook/addon-a11y'
+  ],
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
+  docs: {
+    autodocs: 'tag',
   },
 };
-
 export default config;
