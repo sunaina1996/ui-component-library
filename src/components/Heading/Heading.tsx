@@ -50,7 +50,7 @@ export const Heading: React.FC<HeadingProps> = ({
   const Tag = `h${safeLevel}` as keyof JSX.IntrinsicElements;
 
   return (
-    <div className={`max-w-3xl rounded-3xl border border-slate-200 bg-slate-50/80 p-6 shadow-sm ${alignStyles[align]} ${className}`}>
+    <div className={`max-w-3xl p-6 ${alignStyles[align]} ${className}`}>
       <Tag className={`${headingSizes[safeLevel]} font-semibold tracking-tight text-slate-900`}>
         {title}
       </Tag>
@@ -59,7 +59,6 @@ export const Heading: React.FC<HeadingProps> = ({
           {subtitle}
         </p>
       )}
-      <div className="mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-sky-500 to-indigo-500" />
     </div>
   );
 };
